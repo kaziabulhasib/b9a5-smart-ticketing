@@ -13,11 +13,39 @@
     <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header></header>
+  <body class="max-w-[1440px] mx-auto my-12 font-rail">
+    <header>
+      <!-- nav bar -->
+      <!-- main div  -->
+      <div class="flex justify-between items-center">
+        <h1 class="text-4xl font-extrabold">P-Ticket</h1>
+        <ul class="flex gap-14 font-medium text-[18px]">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Destination</a></li>
+          <li><a href="">search</a></li>
+        </ul>
+
+        <div
+          class="flex justify-between items-center gap-2 bg-[#1DD1001A] text-[#1DD100] px-8 py-4 border border-[#1DD10066] rounded-xl box-border">
+          <h1 class="m-0 p-0 text-[20px] font-bold">Bus</h1>
+          <img src="images/bus-icon.png" alt="" class="w-6 h-6" />
+        </div>
+      </div>
+    </header>
     <main>
-      <h1 class="text-red-500 font-bold text-3xl">Hello daisy</h1>
-      <h2 id="css-style">P-Ticket</h2>
+      <!-- Hero section -->
+      <div class="mt-12">
+        <h1>
+          End-to-End Travel with <br />
+          <span class="text-green-500"> P Paribahan</span>
+        </h1>
+        <p>
+          P Paribahan: Your gateway to seamless journeys, offering comfort,
+          reliability, and personalized travel experiences.
+        </p>
+        <button class="btn">Buy Tickets</button>
+      </div>
     </main>
     <footer></footer>
     <script src="Script/script.js"></script>
