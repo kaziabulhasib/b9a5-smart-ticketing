@@ -1,1 +1,3 @@
-console.log("hello from js");
+function goToSection() {
+  window.location.href = "#ph-paribahan";
+}
