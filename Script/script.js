@@ -57,6 +57,23 @@ for (const bookButton of bookButtons) {
   });
 }
 
+// coupon apply button
+
+function applyCoupon() {
+  // hide the container
+  document.getElementById("coupon-container").classList.add("hidden");
+  const couponInput = document.getElementById("coupon-input");
+  const couponCode = couponInput.value.split(" ").join("").toLowerCase();
+  if (couponCode === "new15") {
+    discount = totalPrice * 0.15;
+  } else if (couponCode === "couple20") {
+    discount = totalPrice * 0.2;
+  } else {
+    discount = 0;
+  }
+  grandTotal = totalPrice - discount;
+  document.getElementById("grand-total").innerText = grandTotal;
+}
 // hide the modal on click()
 
 function modalHide() {

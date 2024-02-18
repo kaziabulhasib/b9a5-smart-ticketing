@@ -266,7 +266,23 @@
                 BDT <span id="total-price">0</span>
               </h1>
             </div>
+            <hr />
             <!-- coupon section  -->
+            <div
+              id="coupon-container"
+              class="relative flex justify-between items-center my-4">
+              <input
+                id="coupon-input"
+                type="text"
+                placeholder="Have any copupon?"
+                class="border py-5 pl-5 w-full rounded-xl" />
+              <button
+                onclick="applyCoupon()"
+                id="apply-coupon"
+                class="absolute right-2 bg-[#1DD100] py-3 px-[18px] rounded-lg text-white font-inter text-base font-semibold">
+                Apply
+              </button>
+            </div>
             <!-- grand Total price part  -->
             <div class="flex justify-between">
               <h1 class="text-base font-inter font-medium text-[#030712] my-4">
@@ -276,6 +292,7 @@
                 BDT <span id="grand-total">0</span>
               </h1>
             </div>
+            <hr />
             <!-- second part input & modal  -->
             <div>
               <label class="form-control w-full max-w-xs">
@@ -303,10 +320,11 @@
                 <input
                   type="text"
                   placeholder="Enter your phone number"
-                  class="input input-bordered w-full block mt-4 mb-6" />
+                  class="input input-bordered w-full block mt-4 mb-6"
+                  required />
               </label>
             </div>
-            <!-- thid input  -->
+            <!-- third input  -->
             <div>
               <label class="form-control w-full max-w-xs">
                 <div class="label">
