@@ -9,6 +9,8 @@ let setBookCount = 0;
 let seatLeft = 8;
 let bookDetailsContainer = document.getElementById("book-details-container");
 let totalPrice = 0;
+let grandTotal = 0;
+let discount = 0;
 
 for (const bookButton of bookButtons) {
   bookButton.addEventListener("click", function () {
@@ -27,26 +29,31 @@ for (const bookButton of bookButtons) {
       totalPrice += 550;
       document.getElementById("total-price").innerText = totalPrice;
 
+      // grand total
+      grandTotal = totalPrice - discount;
+      console.log(grandTotal);
+      document.getElementById("grand-total").innerText = grandTotal;
+
       // seat left
       document.getElementById("seat-book-count").innerText = setBookCount;
       seatLeft--;
       document.getElementById("seat-left").innerText = seatLeft;
+
+      // adding book details in the container
+      const div = document.createElement("div");
+      const p1 = document.createElement("p");
+      const p2 = document.createElement("p");
+      const p3 = document.createElement("p");
+      p1.innerText = bookButton.innerText;
+      p2.innerText = "Economoy";
+      p3.innerText = "550";
+      div.appendChild(p1);
+      div.appendChild(p2);
+      div.appendChild(p3);
+      div.setAttribute("class", "seat-class-price");
+
+      bookDetailsContainer.appendChild(div);
     }
-
-    // adding book details in the container
-    const div = document.createElement("div");
-    const p1 = document.createElement("p");
-    const p2 = document.createElement("p");
-    const p3 = document.createElement("p");
-    p1.innerText = bookButton.innerText;
-    p2.innerText = "Economoy";
-    p3.innerText = "550";
-    div.appendChild(p1);
-    div.appendChild(p2);
-    div.appendChild(p3);
-    div.setAttribute("class", "seat-class-price");
-
-    bookDetailsContainer.appendChild(div);
   });
 }
 
