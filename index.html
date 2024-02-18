@@ -27,7 +27,7 @@
         </ul>
 
         <div
-          class="flex justify-between items-center gap-2 bg-[#1DD1001A] text-[#1DD100] px-8 py-4 border border-[#1DD10066] rounded-xl box-border">
+          class="flex justify-between items-center gap-2 bg-[#1DD1001A] text-[#1DD100] px-8 py-4 border-[#1DD10066] rounded-xl box-border">
           <h1 class="m-0 p-0 text-[20px] font-bold">Bus</h1>
           <img src="images/bus-icon.png" alt="" class="w-6 h-6" />
         </div>
@@ -152,11 +152,11 @@
                 </button>
                 <button
                   class="bg-[#0307120D] p-4 rounded-xl font-inter font-medium text-base">
-                  Boarding Point - Laxmipur
+                  Dropping Point - Bogura
                 </button>
                 <button
                   class="bg-[#0307120D] p-4 rounded-xl font-inter font-medium text-base">
-                  Boarding Point - Laxmipur
+                  Est. Time - 11 Hour
                 </button>
               </div>
             </div>
@@ -167,6 +167,168 @@
             <img class="text-center" src="images/fare.png" alt="" />
             <h1 class="mt-6 mb-2 font-bold text-[32px]">550 Taka</h1>
             <p class="font-semibold text-2xl">Per Seat</p>
+          </div>
+        </div>
+        <!-- ticket booking section  -->
+        <div class="flex justify-between items-start my-24 gap-12">
+          <!-- left side  -->
+          <div class="flex-1">
+            <h1 class="text-2xl font-semibold my-6">Select Your Seat</h1>
+            <hr />
+            <!-- first row  -->
+            <div class="flex justify-between items-center gap-8 my-6">
+              <h1 class="font-inter font-medium text-[18px] text-[#03071280">
+                A
+              </h1>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                A1
+              </button>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                A2
+              </button>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                A3
+              </button>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                A4
+              </button>
+            </div>
+            <!-- second row  -->
+            <div class="flex justify-between items-center gap-8 my-6">
+              <h1 class="font-inter font-medium text-[18px] text-[#03071280">
+                B
+              </h1>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                B1
+              </button>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                B2
+              </button>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                B3
+              </button>
+              <button
+                id="seat-btn"
+                class="seat-button bg-[#F7F8F8] px-11 py-4 rounded-xl font-inter font-medium text-[18px] text-[#03071280]">
+                B4
+              </button>
+            </div>
+          </div>
+
+          <!-- right side  -->
+
+          <div class="flex-1 text-center">
+            <h1 class="text-2xl font-semibold my-6">Select Your Seat</h1>
+            <hr />
+            <!-- js part  -->
+            <div>
+              <!-- seat table  -->
+              <div class="seat-class-container relative">
+                <div class="seat-class-price">
+                  <p class="font-inter font-semibold text-base text-[#030712]">
+                    Seat
+                  </p>
+                  <p class="font-inter font-semibold text-base text-[#030712]">
+                    Class
+                  </p>
+                  <p class="font-inter font-semibold text-base text-[#030712]">
+                    Price
+                  </p>
+                </div>
+                <!-- seat book count -->
+                <p
+                  id="seat-book-count"
+                  class="flex justify-center items-center absolute h-10 w-10 rounded-full bg-[#1DD100] text-white font-inter font-semibold left-3 top-[-32px]">
+                  0
+                </p>
+              </div>
+            </div>
+            <!-- second part input & modal  -->
+            <div>
+              <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span
+                    class="label-text font-inter font-semibold text-[#030712] text-base"
+                    >Passenger Name</span
+                  >
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="input input-bordered w-full block mt-4 mb-6" />
+              </label>
+            </div>
+            <!-- second input -->
+            <div>
+              <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span
+                    class="label-text font-inter font-semibold text-[#030712] text-base"
+                    >Phone Number</span
+                  >
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your phone number"
+                  class="input input-bordered w-full block mt-4 mb-6" />
+              </label>
+            </div>
+            <!-- thid input  -->
+            <div>
+              <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span
+                    class="label-text font-inter font-semibold text-[#030712] text-base"
+                    >Email ID</span
+                  >
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="input input-bordered w-full block mt-4 mb-6" />
+              </label>
+            </div>
+            <!-- modal start  -->
+            <!-- You can open the modal using ID.showModal() method -->
+            <button
+              class="bg-[#1DD100] text-white py-4 px-24 rounded-2xl text-xl font-extrabold w-full"
+              onclick="my_modal_4.showModal() ">
+              Next
+            </button>
+            <dialog id="my_modal_4" class="modal">
+              <div
+                class="modal-box w-11/12 max-w-5xl flex flex-col items-center font-inter">
+                <img src="images/success.png" alt="" />
+                <h3 class="font-bold text-lg text-[#27AE60] my-9">sucess!</h3>
+                <h4 class="text-black font-semibold">
+                  Thank you for Booking Our Bus Seats. We are working hard to
+                  find the best service and deals for you.
+                </h4>
+                <p class="py-4 text-gray-500">
+                  Shortly you will find a confirmation in your email.
+                </p>
+                <button
+                  class="bg-[#27AE60] text-white py-4 px-24 rounded-[32px]"
+                  disabled>
+                  Continue
+                </button>
+              </div>
+            </dialog>
+            <!-- modal end -->
           </div>
         </div>
       </div>
