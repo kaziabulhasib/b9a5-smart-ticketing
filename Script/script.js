@@ -6,21 +6,32 @@ function goToSection() {
 
 const bookButtons = document.getElementsByClassName("seat-button");
 let setBookCount = 0;
-let seatLeft = 40;
+let seatLeft = 8;
 let bookDetailsContainer = document.getElementById("book-details-container");
+let totalPrice = 0;
 
 for (const bookButton of bookButtons) {
   bookButton.addEventListener("click", function () {
-    bookButton.style.backgroundColor = "#1DD100";
-    bookButton.style.color = "white";
-    bookButton.disabled = true;
-
     // seting the value of seat book count & seat left
-    setBookCount++;
-    // console.log(setBookCount);
-    document.getElementById("seat-book-count").innerText = setBookCount;
-    seatLeft--;
-    document.getElementById("seat-left").innerText = seatLeft;
+
+    // alert for more than 4 tickets
+    if (setBookCount >= 4) {
+      alert("you are allowed only 4 ticket to book.");
+    } else {
+      setBookCount++;
+      bookButton.style.backgroundColor = "#1DD100";
+      bookButton.style.color = "white";
+      bookButton.disabled = true;
+
+      // total price
+      totalPrice += 550;
+      document.getElementById("total-price").innerText = totalPrice;
+
+      // seat left
+      document.getElementById("seat-book-count").innerText = setBookCount;
+      seatLeft--;
+      document.getElementById("seat-left").innerText = seatLeft;
+    }
 
     // adding book details in the container
     const div = document.createElement("div");
@@ -37,4 +48,10 @@ for (const bookButton of bookButtons) {
 
     bookDetailsContainer.appendChild(div);
   });
+}
+
+// hide the modal on click()
+
+function modalHide() {
+  document.getElementById("modal-container").classList.add("hidden");
 }
