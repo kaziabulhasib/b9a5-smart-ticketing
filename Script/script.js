@@ -60,16 +60,20 @@ for (const bookButton of bookButtons) {
 // coupon apply button
 
 function applyCoupon() {
-  // hide the container
-  document.getElementById("coupon-container").classList.add("hidden");
   const couponInput = document.getElementById("coupon-input");
   const couponCode = couponInput.value.split(" ").join("").toLowerCase();
   if (couponCode === "new15") {
     discount = totalPrice * 0.15;
+    // hide the container
+    document.getElementById("coupon-container").classList.add("hidden");
   } else if (couponCode === "couple20") {
     discount = totalPrice * 0.2;
+    // hide the container
+    document.getElementById("coupon-container").classList.add("hidden");
   } else {
     discount = 0;
+    alert("Coupon code is invalid.");
+    couponInput.value = " ";
   }
   grandTotal = totalPrice - discount;
   document.getElementById("grand-total").innerText = grandTotal;
